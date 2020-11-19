@@ -55,6 +55,7 @@
         </h1>
       </div>
       <section class="slogan-form">
+        <h2 class="visually-hidden">Слоган</h2>
         <div class="slogan-form__wrapper">
          <p class="slogan-form__text">
            Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
@@ -62,6 +63,7 @@
         </div>
       </section>
       <section class="main-form">
+        <h2 class="visually-hidden">Форма заказа</h2>
         <div class="main-form__wrapper">
           <form class="form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="form__fieldset">
@@ -71,11 +73,11 @@
               <ul class="form__list">
                 <li class="radio form__item">
                   <input class="visually-hidden radio__input" id="type-accessory" type="radio" name="product-type" value="accessory" checked="">
-                  <label class="radio__label" id="type-accessory">Аксессуар для интерьера</label>
+                  <label class="radio__label" for="type-accessory">Аксессуар для интерьера</label>
                 </li>
                 <li class="radio form__item">
                   <input class="visually-hidden radio__input" id="type-toy" type="radio" name="product-type" value="toy">
-                  <label class="radio__label" id="type-toy">Детская игрушка</label>
+                  <label class="radio__label" for="type-toy">Детская игрушка</label>
                 </li>
               </ul>
             </fieldset>
@@ -86,27 +88,27 @@
               <ul class="form__list">
                 <li class="checkbox">
                   <input class="visually-hidden checkbox__input" id="color-white" type="checkbox" name="product-color-white" checked="">
-                  <label class="checkbox__label" id="color-white">Белый</label>
+                  <label class="checkbox__label" for="color-white">Белый</label>
                 </li>
                 <li class="checkbox">
                   <input class="visually-hidden checkbox__input" id="color-grey" type="checkbox" name="product-color-grey" checked="">
-                  <label class="checkbox__label" id="color-grey">Серый</label>
+                  <label class="checkbox__label" for="color-grey">Серый</label>
                 </li>
                 <li class="checkbox">
                   <input class="visually-hidden checkbox__input" id="color-tiffany" type="checkbox" name="product-color-tiffany">
-                  <label class="checkbox__label" id="color-tiffany">«Тиффани»</label>
+                  <label class="checkbox__label" for="color-tiffany">«Тиффани»</label>
                 </li>
                 <li class="checkbox">
                   <input class="visually-hidden checkbox__input" id="color-black" type="checkbox" name="product-color-black">
-                  <label class="checkbox__label" id="color-black">Черный</label>
+                  <label class="checkbox__label" for="color-black">Черный</label>
                 </li>
                 <li class="checkbox">
                   <input class="visually-hidden checkbox__input" id="color-rose" type="checkbox" name="product-color-rose">
-                  <label class="checkbox__label" id="color-rose">Розовый</label>
+                  <label class="checkbox__label" for="color-rose">Розовый</label>
                 </li>
                 <li class="checkbox">
                   <input class="visually-hidden checkbox__input" id="color-orange" type="checkbox" name="product-color-orange">
-                  <label class="checkbox__label" id="color-orange">Оранжевый</label>
+                  <label class="checkbox__label" for="color-orange">Оранжевый</label>
                 </li>
               </ul>
             </fieldset>
@@ -116,15 +118,15 @@
               </legend>
               <ul class="form__list">
                 <li class="form__list-item">
-                  <label class="form__label" id="fio-name">Имя:</label>
+                  <label class="form__label" for="fio-name">Имя:</label>
                   <input class="form__input" id="fio-name" type="text" name="fio-name" placeholder="Введите ваше имя*">
                 </li>
                 <li class="form__list-item">
-                  <label class="form__label" id="fio-surname">Фамилия:</label>
+                  <label class="form__label" for="fio-surname">Фамилия:</label>
                   <input class="form__input" id="fio-surname" type="text" name="fio-surname" placeholder="Укажите фамилию*">
                 </li>
                 <li class="form__list-item">
-                  <label class="form__label" id="fio-patronymic">Отчество:</label>
+                  <label class="form__label" for="fio-patronymic">Отчество:</label>
                   <input class="form__input" id="fio-patronymic" type="text" name="fio-patronymic" placeholder="Отчество, если желаете">
                 </li>
               </ul>
@@ -132,15 +134,15 @@
             <fieldset class="form__fieldset form__fieldset--contacts">
               <ul class="form__list">
                 <li class="form__item">
-                  <label class="form__label form__label--contacts" id="user-telephone">Тел</label>
+                  <label class="form__label form__label--contacts" for="user-telephone">Тел</label>
                   <input class="form__input" type="text" id="user-telephone" name="user-telephone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
                 </li>
                 <li class="form__item">
-                  <label class="form__label form__label--contacts" id="user-email">E-mail</label>
+                  <label class="form__label form__label--contacts" for="user-email">E-mail</label>
                   <input class="form__input" type="text" id="user-email" name="user-email" placeholder="Ваш Email*">
                 </li>
                 <li class="form__item">
-                  <label class="form__label form__label--contacts" id="user-text">Доп</label>
+                  <label class="form__label form__label--contacts" for="user-text">Доп</label>
                   <textarea class="form__textarea" id="user-text" name="more-info" placeholder="Опишите все ваши пожелания к заказу"></textarea>
                 </li>
               </ul>
@@ -157,7 +159,7 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <img class="logo-footer visually-hidden" src="https://via.placeholder.com/102x34" width="102" height="34">
+        <img class="logo-footer visually-hidden" src="https://via.placeholder.com/102x34" width="102" height="34" alt="">
         <div class="page-footer__social social">
           <b class="social__title">Давайте дружить!</b>
           <ul class="social__list">
