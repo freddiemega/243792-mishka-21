@@ -42,17 +42,35 @@
 }
 
 .form__input {
+  font-family: inherit;
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
-  color: fade(@basic-black; 30%);
+  color: @basic-grey;
+
+  &::placeholder {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 18px;
+    color: rgba(@basic-black; 0.3);
+  }
 }
 
 .form__textarea {
+  font-family: inherit;
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
-  color: fade(@basic-black; 30%);
+  color: @basic-grey;
+
+  &::placeholder {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 18px;
+    color: rgba(@basic-black; 0.3);
+  }
 }
 
 .form__note {
