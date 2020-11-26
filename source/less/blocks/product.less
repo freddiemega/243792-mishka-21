@@ -8,6 +8,25 @@
   padding: 30px;
   outline: 5px solid lime;
   outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+    padding: 0 50px;
+  }
+}
+
+.product__name-container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }
 
 .product__name {
@@ -16,6 +35,16 @@
   font-size: 17px;
   line-height: 20px;
   color: @basic-green;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    br {
+    display: block;
+    }
+  }
 }
 
 .product__title {

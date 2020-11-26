@@ -1,5 +1,15 @@
 .user-list {
   background-color: @basic-white;
+  outline: 5px solid green;
+  outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: end;
+  }
 }
 
 .user-list__item a {
