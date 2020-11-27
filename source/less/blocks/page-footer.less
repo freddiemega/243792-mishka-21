@@ -4,4 +4,25 @@
   background-color: @special-grey;
   outline: 5px solid maroon;
   outline-offset: -5px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
+    padding: 50px;
+  }
+}
+
+.page-footer__logo {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
