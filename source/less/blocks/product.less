@@ -3,23 +3,17 @@
 }
 
 .product__wrapper {
-  width: 320px;
-  margin: 0 auto;
   padding: 30px;
   outline: 5px solid lime;
   outline-offset: -5px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
-    padding: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: min-content 1fr min-content min-content;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1150px;
-    padding: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: min-content 1fr min-content min-content;
