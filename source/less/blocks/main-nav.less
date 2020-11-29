@@ -32,12 +32,21 @@
 
 .main-nav__toggle {
   align-self: flex-end;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
-    display: none;
+    background-color: @special-grey-background;
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 100%;
+    border: none;
+    cursor: auto;
   }
 }
-
+/*
 .main-nav__special {
   display: none;
 
@@ -50,3 +59,4 @@
     grid-row-end: 3;
   }
 }
+*/
