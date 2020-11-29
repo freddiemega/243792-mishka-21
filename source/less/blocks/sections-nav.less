@@ -3,8 +3,6 @@
 }
 
 .sections-nav__wrapper {
-  width: 320px;
-  margin: 0 auto;
   padding: 0;
   outline: 5px solid orange;
   outline-offset: -5px;
@@ -14,6 +12,16 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.sections-nav__item {
+  min-height: 115px;
 }
 
 .sections-nav__item a {
@@ -26,8 +34,16 @@
 
 .sections-nav__item-left {
   background-color: @basic-green;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
 }
 
 .sections-nav__item-right {
   background-color: @special-green-darker;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
 }

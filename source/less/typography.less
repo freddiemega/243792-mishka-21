@@ -3,4 +3,28 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.address-text {
+  color: @basic-grey;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  font-style: normal;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }

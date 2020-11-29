@@ -1,13 +1,35 @@
 .page-header {
   background-color: @basic-white;
   color: @basic-black;
-  width: 320px;
-  margin: 0 auto;
-  padding: 0 30px;
-  outline: 5px solid red;
-  outline-offset: -5px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-header__slogan {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+    display: block;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: end;
+  }
+}
+
+.page-header__logo {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: calc(50% - 334px);
+    top: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: calc(50% - 43px);
+    top: 20px;
+  }
 }

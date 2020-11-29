@@ -1,13 +1,15 @@
 .slogan {
-  background-color: @basic-white;
+  background-color: @special-grey-background;
 }
 
 .slogan__wrapper {
-  width: 320px;
-  margin: 0 auto;
-  padding: 0 30px;
   outline: 5px solid purple;
   outline-offset: -5px;
+  min-height: 283px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 580px;
+  }
 }
 
 .slogan__title {
@@ -18,4 +20,14 @@
   text-decoration: none;
   text-align: center;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
