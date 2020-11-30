@@ -7,6 +7,58 @@
   margin: 0;
   padding: 0;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    &--dark {
+      background-color: @special-grey-background;
+    }
+  }
+}
+
+.form__wrapper {
+  @media (min-width: @tablet-width) {
+    max-width: 768px;
+    padding: 50px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: min-content;
+
+    &--contacts {
+      display: block;
+    }
+
+    &--button {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1150px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: min-content;
+
+    &--contacts {
+      display: block;
+    }
+
+    &--button {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 225px;
+      padding-right: 225px;
+    }
+  }
 }
 
 .form__legend {
@@ -18,12 +70,53 @@
   color: @basic-green;
   text-transform: uppercase;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: -1;
+  }
 }
 
 .form__list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: -1;
+
+    &--checkbox {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: -2;
+    grid-row-start: 1;
+    grid-row-end: -1;
+
+    &--checkbox {
+      grid-column-start: 2;
+      grid-column-end: -1;
+      grid-row-start: 1;
+      grid-row-end: -1;
+    }
+  }
 }
 
 .form__label {
@@ -38,6 +131,17 @@
     font-size: 17px;
     line-height: 16px;
     color: @basic-green;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+
+    &--contacts {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: -1;
+    }
   }
 }
 
@@ -55,6 +159,22 @@
     line-height: 18px;
     color: rgba(@basic-black; 0.3);
   }
+
+  @media (min-width: @tablet-width) {
+    &--contacts {
+      width: 501px;
+    }
+
+    &--fio {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--contacts {
+      width: 700px;
+    }
+  }
 }
 
 .form__textarea {
@@ -71,6 +191,21 @@
     line-height: 18px;
     color: rgba(@basic-black; 0.3);
   }
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: -1;
+    min-height: 142px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: -2;
+    grid-row-start: 1;
+    grid-row-end: -1;
+  }
 }
 
 .form__note {
@@ -80,4 +215,55 @@
   font-size: 14px;
   line-height: 16px;
   color: @basic-grey;
+}
+
+.form__item {
+  @media (min-width: @tablet-width) {
+    min-width: 250px;
+    padding-bottom: 25px;
+
+    &--contacts {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &--contacts:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--contacts {
+      padding-right: 175px;
+    }
+  }
+}
+
+.form__list-item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &--contacts input {
+      width: 501px;
+    }
+  }
+}
+
+.form__button {
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
 }
