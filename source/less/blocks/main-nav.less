@@ -7,13 +7,23 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: auto 320px 348px auto;
-    grid-template-rows: 88px 64px;
+    grid-template-rows: min-content min-content;
+
+    &::before {
+      content: "";
+      display: block;
+      background-color: @special-grey-background;
+      grid-column-start: 1;
+      grid-column-end: -1;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: auto 701px 349px auto;
-    grid-template-rows: 88px 64px;
+    grid-template-rows: min-content min-content;
   }
 }
 
@@ -35,18 +45,5 @@
 
   @media (min-width: @tablet-width) {
     display: none;
-  }
-}
-
-.main-nav__special {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-    background-color: @special-grey-background;
-    grid-column-start: 1;
-    grid-column-end: -1;
-    grid-row-start: 2;
-    grid-row-end: 3;
   }
 }
