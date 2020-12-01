@@ -1,11 +1,58 @@
 .card {
-  margin: 0;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 316px;
+    min-height: 659px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.card__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding-left: 34px;
+    padding-right: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    min-width: 316px;
+    max-width: 316px;
+    height: 100%;
+    padding: 26px 20px 28px 28px;
+  }
+}
+
+.card__container-name {
+  @media (min-width: @tablet-width) {
+    padding-top: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
+}
+
+.card__container-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .card__title {
@@ -15,6 +62,11 @@
   color: @basic-black;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .card__link-title {
@@ -31,12 +83,6 @@
   padding: 0;
 }
 
-.card__container-price {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .card__price {
   font-weight: 700;
   font-size: 15px;
@@ -44,4 +90,12 @@
   color: @basic-black;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @desktop-width) {
+    padding: 24px 0;
+  }
+}
+
+.card__picture {
+  display: block;
 }
