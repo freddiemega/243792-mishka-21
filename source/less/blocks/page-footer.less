@@ -6,7 +6,8 @@
   background-color: @special-grey;
 
   @media (min-width: @tablet-width) {
-    padding: 50px;
+    padding: 0 50px;
+    min-height: 143px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -18,5 +19,32 @@
 
   @media (min-width: @tablet-width) {
     display: block;
+    margin-right: 122px;
+  }
+}
+
+.page-footer__social {
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 59px;
+  padding-right: 59px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.page-footer__copyright {
+  min-height: 80px;
+  width: 260px;
+  border-top: 1px solid @special-grey-divide;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
   }
 }
