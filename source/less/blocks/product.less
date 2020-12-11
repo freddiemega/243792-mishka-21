@@ -3,40 +3,48 @@
 
   &::after {
     content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
     display: block;
     height: 6px;
     margin: 0;
     padding: 0;
     background-image: url("../img/zigzag-separator-mobile.svg");
     background-repeat: repeat-x;
-    background-size: 320px 100%;
+    background-position: 50% 100%;
   }
 
   @media (min-width: @tablet-width) {
     &::after {
       content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
       display: block;
       height: 17px;
       margin: 0;
       padding: 0;
       background-image: url("../img/zigzag-separator-tablet.svg");
       background-repeat: repeat-x;
-      background-size: 768px 100%;
-      transform: rotate(180deg);
+      background-position: 50% 100%;
     }
   }
 
   @media (min-width: @desktop-width) {
     &::after {
       content: "";
+      position: absolute;
+      left: calc(50% - 525px);
+      width: 1050px;
       display: block;
       height: 23px;
       margin: 0;
       padding: 0;
       background-image: url("../img/zigzag-separator-desktop.svg");
-      background-repeat: repeat-x;
       background-size: 1050px 100%;
-      transform: rotate(180deg);
+      //background-position: 50% 50%;
+      //transform: rotate(180deg);
     }
   }
 }
