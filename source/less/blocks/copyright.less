@@ -3,4 +3,15 @@
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
+  padding-right: 20px;
+}
+
+.copyright__link {
+  &:hover path {
+    fill: @special-green-underline-2;
+  }
+
+  &:active path {
+    fill: fade(@special-green-underline-2; 30%);
+  }
 }

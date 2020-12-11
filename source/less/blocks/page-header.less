@@ -5,11 +5,12 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .page-header__slogan {
   display: none;
-
 
   @media (min-width: @tablet-width) {
     background-color: transparent;
@@ -19,14 +20,24 @@
     grid-row-start: 2;
     grid-row-end: 3;
     justify-self: end;
+    margin-top: 20px;
+    margin-bottom: 0;
   }
 }
 
-.page-header__logo {
+.page-header__container {
+  padding-top: 21px;
+  padding-bottom: 17px;
+  border-top: 1px solid @special-grey-lighter;
+
   @media (min-width: @tablet-width) {
     position: absolute;
     left: calc(50% - 334px);
     top: 20px;
+    z-index: 1;
+    padding-top: 10px;
+    padding-bottom: 0;
+    border: none;
   }
 
   @media (min-width: @desktop-width) {

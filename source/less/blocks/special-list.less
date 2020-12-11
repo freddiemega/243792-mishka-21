@@ -16,3 +16,31 @@
     align-self: center;
   }
 }
+
+.special-list__item a {
+  color: @basic-black;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 20px;
+  }
+}
+
+.special-list__item {
+  @media (min-width: @desktop-width) {
+    padding-top: 20px;
+    padding-bottom: 34px;
+    padding-right: 63px;
+  }
+}

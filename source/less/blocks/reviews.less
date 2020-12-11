@@ -1,48 +1,99 @@
 .reviews {
   background-color: @basic-white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: block;
+    height: 6px;
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/zigzag-separator-mobile.svg");
+    background-repeat: repeat-x;
+    background-position: 50% 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      display: block;
+      height: 17px;
+      margin: 0;
+      padding: 0;
+      background-image: url("../img/zigzag-separator-tablet.svg");
+      background-repeat: repeat-x;
+      background-position: 50% 100%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      left: calc(50% - 525px);
+      width: 1050px;
+      display: block;
+      height: 23px;
+      margin: 0;
+      padding: 0;
+      background-image: url("../img/zigzag-separator-desktop.svg");
+      background-size: 1050px 100%;
+    }
+  }
 }
 
 .reviews__wrapper {
   padding: 30px;
-  outline: 5px solid fuchsia;
-  outline-offset: -5px;
+  padding-bottom: 45px;
 
   @media (min-width: @tablet-width) {
     padding: 50px;
+    padding-bottom: 85px;
     background-image: url("../img/review.jpg");
     background-repeat: no-repeat;
-    background-position: 0 center;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 78px min-content min-content 80px;
+    grid-template-rows: min-content min-content;
   }
 
   @media (min-width: @desktop-width) {
+    background-position: top 40px left 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 78px min-content min-content 80px;
+    grid-template-rows: min-content min-content;
+    padding-bottom: 130px;
   }
 }
 
 .reviews__title {
   margin: 0;
+  margin-bottom: 12px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
     font-size: 43px;
     line-height: 50px;
+    margin: 0;
+    padding-top: 36px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
     grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
     font-size: 53px;
     line-height: 57px;
+    padding-top: 68px;
   }
 }
 
@@ -50,15 +101,15 @@
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: -1;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
     grid-column-end: 7;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 }
 
@@ -70,73 +121,149 @@
   margin: 0;
 
   &--text {
-    @media (min-width: @tablet-width) {
-      margin-bottom: 60px;
+    margin-bottom: 33px;
+  }
+
+  &--name {
+    color: @basic-black;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 3px;
+  }
+
+  &--link {
+    color: @basic-grey;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 30px;
+    text-decoration: none;
+    margin: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: @special-green-underline;
+  }
+
+  &--link:hover {
+    color: @special-green-underline-2;
+    border-bottom-color: @special-green-underline-2;
+  }
+
+  &--link:active {
+    color: @special-green-underline-2;
+    border-bottom-color: fade(@special-green-underline-2; 10%);
+  }
+
+  @media (min-width: @tablet-width) {
+    &--text {
+      font-size: 17px;
+      line-height: 30px;
+      padding-top: 40px;
+      padding-bottom: 27px;
+    }
+
+    &--name {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &--link {
+      font-size: 17px;
+      line-height: 30px;
     }
   }
-}
 
-.reviews__item--name {
-  color: @basic-black;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
-  margin: 0;
-}
+  @media (min-width: @desktop-width) {
+    &--text {
+      padding-top: 37px;
+      padding-bottom: 10px;
+    }
 
-.reviews__item--link {
-  color: @basic-grey;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 30px;
-  text-decoration: none;
-  margin: 0;
+    &--name {
+      font-size: 17px;
+      line-height: 24px;
+    }
+  }
 }
 
 .reviews__buttons-container {
   display: flex;
   flex-direction: row;
   height: 26px;
+  margin-bottom: 64px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: -1;
-    grid-column-end: -2;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-column-end: -3;
+    grid-row-start: 2;
+    grid-row-end: 3;
     z-index: 10;
-    align-self: flex-end;
+    align-self: end;
+    justify-self: end;
+    width: 175px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column-start: -1;
     grid-column-end: -2;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
     z-index: 10;
     align-self: flex-end;
+    margin-bottom: 58px;
+  }
+}
+
+.reviews__button {
+  height: 50px;
+  width: 50%;
+  background-color: transparent;
+  border: 1px solid @special-grey-lighter;
+  cursor: pointer;
+
+  &--left {
+    border-right: none;
+  }
+
+  &:hover > svg {
+    opacity: 0.6;
+  }
+
+  &:active > svg {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    border: none;
   }
 }
 
 .reviews__button-write {
   color: @basic-grey;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  text-decoration: none;
-  text-transform: uppercase;
   margin: 0;
+  width: 100%;
+  height: 52px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: -1;
-    grid-column-end: -2;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-column-end: -3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: end;
+    margin: 0;
+    width: 175px;
+    margin-top: 32px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column-start: -1;
     grid-column-end: -2;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-self: end;
+    width: 100%;
+    margin-bottom: 4px;
   }
 }

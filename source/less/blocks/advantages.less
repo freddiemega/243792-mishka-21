@@ -4,11 +4,18 @@
 
 .advantages__wrapper {
   padding: 30px;
-  outline: 5px solid aqua;
-  outline-offset: -5px;
+  padding-top: 36px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 72px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 80px;
+  }
 
   @media (min-width: @desktop-width) {
     padding: 50px 225px;
+    padding-top: 93px;
   }
 }
 
@@ -29,18 +36,93 @@
 }
 
 .advantages__item {
+  position: relative;
   color: @basic-black;
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
+  min-height: 123px;
+  padding-top: 83px;
+
+  &--eco::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 33px;
+    height: 38px;
+    top: 29px;
+    left: 8px;
+    background-image: url("../img/icon-eco.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--price::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 47px;
+    height: 27px;
+    top: 29px;
+    left: 0;
+    background-image: url("../img/icon-price.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--likes::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 27px;
+    top: 35px;
+    left: 8px;
+    background-image: url("../img/icon-likes.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--love::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 34px;
+    top: 32px;
+    left: 3px;
+    background-image: url("../img/icon-love.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--patriot::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 55px;
+    height: 23px;
+    top: 33px;
+    left: -5px;
+    background-image: url("../img/icon-patriot.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--gift::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 33px;
+    height: 32px;
+    top: 31px;
+    left: 3px;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+  }
 
   @media (min-width: @tablet-width) {
     flex: 1 0 350px;
-    max-width: 350px;
-
-    margin-bottom: 80px;
+    max-width: 334px;
     font-size: 20px;
     line-height: 22px;
+    padding-top: 96px;
+    margin-bottom: 14px;
 
     &:nth-child(3n) {
       margin-bottom: 0;
@@ -61,6 +143,34 @@
     &:nth-child(5) {
       order: -1;
     }
+
+    &--eco::after {
+      top: 39px;
+    }
+
+    &--price::after {
+      top: 43px;
+    }
+
+    &--likes::after {
+      top: 48px;
+    }
+
+    &--love::after {
+      top: 42px;
+    }
+
+    &--patriot::after {
+      top: 44px;
+    }
+
+    &--gift::after {
+      top: 44px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 350px;
   }
 }
 

@@ -12,4 +12,17 @@
   padding: 14px 11px;
   border: 2px solid @basic-grey;
   cursor: pointer;
+
+  &:hover {
+    color: @basic-white;
+    background-color: @basic-grey;
+  }
+
+  &:active {
+    color: fade(@basic-white, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 }

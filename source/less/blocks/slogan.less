@@ -1,14 +1,26 @@
 .slogan {
   background-color: @special-grey-background;
+  border-top: 1px solid @special-grey-lighter;
+
+  @media (min-width: @tablet-width) {
+    border-top: none;
+  }
 }
 
 .slogan__wrapper {
-  outline: 5px solid purple;
-  outline-offset: -5px;
+  background-image: url("../img/hero-mobile-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top -15px center;
   min-height: 283px;
 
   @media (min-width: @tablet-width) {
-    min-height: 580px;
+    min-height: 550px;
+    background-image: url("../img/hero-tablet-bg.jpg");
+    background-position: top -77px center;
+
+    br:first-child {
+      display: none;
+    }
   }
 }
 
@@ -20,14 +32,17 @@
   text-decoration: none;
   text-align: center;
   margin: 0;
+  padding-top: 70px;
 
   @media (min-width: @tablet-width) {
     font-size: 43px;
     line-height: 50px;
+    padding-top: 77px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 53px;
     line-height: 57px;
+    padding-top: 80px;
   }
 }
