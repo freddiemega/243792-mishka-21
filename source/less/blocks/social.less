@@ -4,15 +4,30 @@
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+  }
 }
 
 .social__item {
+  margin-right: 41px;
+  padding-bottom: 27px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
   @media (min-width: @tablet-width) {
-    margin-right: 40px;
+    margin-right: 41px;
+
+    &:nth-child(3n) {
+      margin-right: 41px;
+    }
   }
 }
 

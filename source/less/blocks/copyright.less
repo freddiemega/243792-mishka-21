@@ -3,15 +3,29 @@
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
-  padding-right: 20px;
+  padding-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 29px;
+  }
 }
 
 .copyright__link {
+  padding-top: 8px;
+
   &:hover path {
     fill: @special-green-underline-2;
   }
 
   &:active path {
     fill: fade(@special-green-underline-2; 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: -16px;
   }
 }
