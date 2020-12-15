@@ -4,7 +4,7 @@
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
@@ -15,12 +15,18 @@
 }
 
 .social__item {
-  @media (min-width: @tablet-width) {
-    margin-right: 40px;
-    margin-bottom: 10px;
+  margin-right: 41px;
+  padding-bottom: 27px;
 
-    &:last-child {
-      margin-right: 0;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 41px;
+
+    &:nth-child(3n) {
+      margin-right: 41px;
     }
   }
 }
