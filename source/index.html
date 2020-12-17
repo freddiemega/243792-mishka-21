@@ -59,11 +59,10 @@
             </a>
           </li>
         </ul>
-      </div>
-      <p class="page-header__slogan">
-        Бесплатная доставка по России
-      </p>
-    </nav>
+        <p class="page-header__slogan">
+          Бесплатная доставка по России
+        </p>
+      </nav>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Интернет-магазин «Мишка» — милые штуки ручной работы для дома</h1>
@@ -143,15 +142,11 @@
               </div>
             </dl>
           </div>
-          <!--MOBILE
-          <img class="product__image" src="img/triple-set-mobile-1.jpg" width="260" height="315" alt="Вязаные корзинки">
-          -->
-          <!--TABLET
-          <img class="product__image" src="https://via.placeholder.com/334x404" width="334" height="404" alt="Вязаные корзинки">
-          -->
-
-          <img class="product__image" src="https://via.placeholder.com/525x636" width="525" height="636" alt="Вязаные корзинки">
-
+          <picture class="product__image">
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
+            <img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
+          </picture>
           <p class="product__price">
             Цена: 990 руб.
           </p>
