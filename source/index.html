@@ -10,7 +10,11 @@
     <header class="page-header container-100">
       <div class="page-header__container">
         <a class="page-header__logo">
-          <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+            <img src="img/mishka-logo-mobile.svg" alt="Интернет-магазин «Мишка»">
+          </picture>
         </a>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -68,9 +72,7 @@
       <h1 class="visually-hidden">Интернет-магазин «Мишка» — милые штуки ручной работы для дома</h1>
       <section class="slogan">
         <div class="slogan__wrapper container">
-          <h2 class="slogan__title">
-            Милые штуки<br> ручной<br> работы для дома
-          </h2>
+          <h2 class="slogan__title">Милые штуки<br> ручной<br> работы для дома</h2>
         </div>
       </section>
       <section class="sections-nav">
@@ -143,9 +145,9 @@
             </dl>
           </div>
           <picture class="product__image">
-            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
-            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
-            <img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
           </picture>
           <p class="product__price">
             Цена: 990 руб.
@@ -255,7 +257,11 @@
             </div>
           </address>
           <div class="contacts__map">
-            <img src="https://via.placeholder.com/320x454" width="320" height="454" alt="Мы на карте">
+            <picture class="product__image">
+              <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Мы на карте">
+            </picture>
           </div>
           <a class="contacts__button button" href="#">
             Напишите нам

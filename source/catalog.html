@@ -10,7 +10,11 @@
     <header class="page-header container-100">
       <div class="page-header__container">
         <a class="page-header__logo" href="index.html">
-          <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Мишка»">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+            <img src="img/mishka-logo-mobile.svg" alt="Интернет-магазин «Мишка»">
+          </picture>
         </a>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
