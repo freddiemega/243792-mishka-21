@@ -4,10 +4,10 @@
 
 .sections-nav__wrapper {
   padding: 0;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     background-color: @special-grey-background;
-    position: relative;
 
     &::after {
       content: "";
@@ -17,12 +17,10 @@
       display: block;
       width: 100%;
       height: 24px;
-      max-height: 34px;
-      padding-top: 3%;
       background-image: url("../img/zigzag-fill-tablet.svg");
       background-repeat: repeat-x;
-      background-size: 770px auto;
-      background-position: 50% 100%;
+      background-position: bottom;
+      background-size: contain;
     }
   }
 
@@ -30,15 +28,16 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: -20px;
+      margin: 0;
+      padding: 0;
+      bottom: -16px;
       left: 0;
       display: block;
       width: 100%;
       height: 34px;
-      max-height: 34px;
-      padding-top: 5%;
-      background-repeat: repeat-x;
-      background-size: 1250px auto;
+      background-image: url("../img/zigzag-fill-desktop.svg");
+      background-position: bottom;
+      background-size: contain;
     }
   }
 }
