@@ -205,7 +205,7 @@
   color: @basic-black;
   display: block;
 
-  &--contacts {
+  &--tel {
     font-weight: 700;
     font-size: 17px;
     line-height: 16px;
@@ -216,11 +216,32 @@
     padding-bottom: 5px;
   }
 
-  &--contacts::after {
+  &--tel::after {
     content: "";
     display: block;
     height: 1px;
     width: 200px;
+    color: @special-green-underline;
+    background-color: @special-green-underline;
+    margin-left: auto;
+  }
+
+  &--email {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 16px;
+    color: @basic-green;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+
+  &--email::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 182px;
     color: @special-green-underline;
     background-color: @special-green-underline;
     margin-left: auto;
@@ -250,7 +271,7 @@
   @media (min-width: @tablet-width) {
     font-size: 19px;
 
-    &--contacts {
+    &--tel {
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 1;
@@ -259,7 +280,20 @@
       font-size: 17px;
     }
 
-    &--contacts::after {
+    &--tel::after {
+      display: none;
+    }
+
+    &--email {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: -1;
+      padding-bottom: 0;
+      font-size: 17px;
+    }
+
+    &--email::after {
       display: none;
     }
 
@@ -281,7 +315,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    &--contacts {
+    &--tel {
+      padding-left: 60px;
+    }
+
+    &--email {
       padding-left: 60px;
     }
 
