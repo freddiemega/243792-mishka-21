@@ -16,13 +16,15 @@
 
 .copyright__link {
   padding-top: 8px;
+  color: @basic-green;
 
-  &:hover path {
-    fill: @special-green-underline-2;
+  &:hover svg {
+    color: @special-green-underline-2;
   }
 
-  &:active path {
-    fill: fade(@special-green-underline-2; 30%);
+  &:active svg {
+    color: @special-green-underline-2;
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {

@@ -84,15 +84,12 @@
     top: -5px;
   }
 
-  &:hover > svg {
+  &:hover > .sections-nav__icon {
     top: 18px;
-  }
-
-  &:hover > svg g {
     opacity: 0.7;
   }
 
-  &:active > svg g {
+  &:active > .sections-nav__icon {
     opacity: 0.3;
   }
 
@@ -116,6 +113,8 @@
 
 .sections-nav__icon {
   position: absolute;
+  opacity: 0.5;
+  color: @special-green-icon;
 
   &--interior {
     top: 23px;
