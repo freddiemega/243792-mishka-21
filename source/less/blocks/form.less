@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-.form__fieldset {
+.form__wrapper {
   margin: 0;
   margin-bottom: 45px;
   padding: 0;
@@ -19,6 +19,10 @@
 
   &--more {
     margin-bottom: 15px;
+  }
+
+  &--button {
+    margin-bottom: 0;
   }
 
   @media (min-width: @tablet-width) {
@@ -43,27 +47,6 @@
     &--more {
       margin-bottom: 3px;
     }
-  }
-
-  @media (min-width: @desktop-width) {
-    &--more {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.form__wrapper {
-  @media (min-width: @tablet-width) {
-    max-width: 768px;
-    padding: 50px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: min-content;
-
-    &--contacts {
-      display: block;
-    }
 
     &--button {
       display: flex;
@@ -72,16 +55,38 @@
       align-items: center;
       padding-top: 0;
       padding-bottom: 0;
+      width: 668px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--more {
+      margin-bottom: 0;
     }
 
-    @media (min-width: @tablet-width) {
-      &--radio {
-        //padding-top: 80px;
-      }
+    &--button {
+      width: 700px;
+    }
+  }
+}
 
-      &--button {
-        align-items: center;
-      }
+.form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    max-width: 768px;
+    padding: 50px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: min-content;
+    position: relative;
+
+    &--contacts {
+      display: block;
     }
   }
 
@@ -111,56 +116,70 @@
 .form__legend {
   margin: 0;
   padding: 0;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 16px;
-  color: @basic-green;
-  text-transform: uppercase;
-  border: none;
-  display: flex;
-  align-items: center;
+  width: 100%;
+
   margin-bottom: 35px;
 
   &--fio {
     margin-bottom: 30px;
   }
 
-  &::after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 200px;
-    color: @special-green-underline;
-    background-color: @special-green-underline;
-    margin-left: auto;
-  }
-
   @media (min-width: @tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: -1;
-    align-self: self-start;
+    width: auto;
+    position: absolute;
+    top: 50px;
+    left: 50px;
 
     &--checkbox {
-      padding-top: 16px;
+      top: 65px;
     }
 
     &--fio {
-      padding-top: 16px;
-    }
-
-    &::after {
-      display: none;
+      top: 65px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: -1;
-    justify-self: center;
+    top: 52px;
+    left: 110px;
+
+    &--checkbox {
+      top: 67px;
+    }
+
+    &--fio {
+      top: 65px;
+    }
+  }
+}
+
+.form__legend-inner {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  color: @basic-green;
+  text-transform: uppercase;
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    color: @special-green-underline;
+    background-color: @special-green-underline;
+    margin-left: 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -381,25 +400,19 @@
     border-bottom: 2px solid @special-green-underline;
   }
 
-  &--contacts:hover + svg path {
-    fill: @special-green-underline;
+  &--contacts:hover + svg {
+    color: @special-green-underline;
+    opacity: 1;
   }
 
-  &--contacts:hover + svg g {
+  &--contacts:focus + svg {
+    color: @special-green-underline;
     opacity: 1;
   }
 
   &--contacts:focus {
     border-bottom: 2px solid @special-green-underline;
     color: @basic-grey;
-  }
-
-  &--contacts:focus + svg path {
-    fill: @special-green-underline;
-  }
-
-  &--contacts:focus + svg g {
-    opacity: 1;
   }
 
   @media (min-width: @tablet-width) {
@@ -441,6 +454,8 @@
     height: 24px;
     top: 10px;
     right: 7px;
+    color: @basic-black;
+    opacity: 0.2;
   }
 
   &--email svg {
@@ -450,6 +465,8 @@
     height: 21px;
     top: 14px;
     right: 2px;
+    color: @basic-black;
+    opacity: 0.2;
   }
 
   @media (min-width: @tablet-width) {
