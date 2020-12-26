@@ -7,7 +7,7 @@
 .page-main__wrapper {
   width: 100%;
   position: relative;
-  background-color: @special-grey-background;
+  background-color: @special-grey;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -65,12 +65,14 @@
   max-width: 320px;
   margin: 0 auto;
   padding: 0 30px;
+  padding-bottom: 4px;
 
   @media (min-width: @tablet-width) {
     font-size: 43px;
     line-height: 50px;
     max-width: 768px;
     padding: 0 50px;
+    margin-top: -2px;
   }
 
   @media (min-width: @desktop-width) {

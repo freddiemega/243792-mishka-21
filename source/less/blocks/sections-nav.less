@@ -84,7 +84,16 @@
     top: -5px;
   }
 
+  &:focus > p {
+    top: -5px;
+  }
+
   &:hover > .sections-nav__icon {
+    top: 18px;
+    opacity: 0.7;
+  }
+
+  &:focus > .sections-nav__icon {
     top: 18px;
     opacity: 0.7;
   }
@@ -97,7 +106,15 @@
     box-shadow: 0 -5px 0 0 @basic-green;
   }
 
+  &--interior:focus {
+    box-shadow: 0 -5px 0 0 @basic-green;
+  }
+
   &--toy:hover {
+    box-shadow: 0 -5px 0 0 @special-green-darker;
+  }
+
+  &--toy:focus {
     box-shadow: 0 -5px 0 0 @special-green-darker;
   }
 

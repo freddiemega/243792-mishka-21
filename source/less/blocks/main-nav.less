@@ -11,7 +11,18 @@
     grid-template-columns: auto 320px 348px auto;
     grid-template-rows: min-content min-content;
 
-    &::before {
+    &--inner-page::before {
+      content: "";
+      display: block;
+      background-color: @special-grey;
+      grid-column-start: 1;
+      grid-column-end: -1;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      border-top: 1px solid fade(@basic-black, 10%);
+    }
+
+    &--main-page::before {
       content: "";
       display: block;
       background-color: @special-grey-background;
