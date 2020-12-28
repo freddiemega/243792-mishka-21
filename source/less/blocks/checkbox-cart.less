@@ -1,0 +1,32 @@
+.checkbox-cart__label {
+  display: block;
+  width: 100%;
+  padding: 17px 0 16px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid fade(@basic-grey, 10%);
+
+  &:hover {
+    border: 2px solid fade(@basic-grey, 30%);
+  }
+
+  &:focus {
+    border: 2px solid fade(@basic-grey, 30%);
+  }
+
+  &:active {
+    border: 2px solid @basic-green;
+  }
+}
+
+.checkbox-cart__control:checked + .checkbox-cart__label {
+  border: 2px solid @basic-green;
+}
+
+.checkbox-cart__control:focus + .checkbox-cart__label {
+  border: 2px solid fade(@basic-grey, 30%);
+}
+
+.checkbox-cart__control:checked:focus + .checkbox-cart__label {
+  border: 2px solid @basic-green;
+}

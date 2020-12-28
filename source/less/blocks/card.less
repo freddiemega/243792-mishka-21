@@ -27,13 +27,17 @@
 }
 
 .card__container {
-  padding-top: 27px;
+  padding-top: 24px;
   padding-right: 28px;
-  padding-bottom: 26px;
+  padding-bottom: 27px;
   padding-left: 28px;
   border: 1px solid @special-grey-lighter;
 
   &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus-within {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   }
 
@@ -56,7 +60,7 @@
     min-width: 316px;
     max-width: 316px;
     height: 100%;
-    padding-top: 26px;
+    padding-top: 22px;
     padding-right: 32px;
     padding-bottom: 0;
     padding-left: 26px;
@@ -82,7 +86,7 @@
   flex-direction: row;
   justify-content: space-between;
   box-shadow: inset 0 1px 0 @special-grey-lighter;
-  padding-top: 22px;
+  padding-top: 24px;
 
   @media (min-width: @desktop-width) {
     padding-top: 0;
@@ -91,6 +95,10 @@
 
 .card__link-image {
   &:hover + .card__container {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:focus + .card__container {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   }
 
@@ -121,15 +129,29 @@
 .card__link-title {
   color: @basic-black;
   text-decoration: none;
-  padding-bottom: 6px;
+  padding-top: 1px;
+  padding-bottom: 5px;
   display: block;
 
   &:hover {
     opacity: 0.6;
   }
 
+  &:focus {
+    opacity: 0.6;
+  }
+
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 4px;
+    padding-bottom: 6px;
   }
 }
 
@@ -175,7 +197,32 @@
   padding: 0;
   margin-right: -3px;
 
+  &:focus .card__button-icon {
+    color: @basic-green;
+    opacity: 1;
+  }
+
   @media (min-width: @desktop-width) {
     margin-right: -1px;
+  }
+}
+
+.card__button-icon {
+  color: @basic-black;
+  opacity: 0.2;
+
+  &:hover {
+    color: @basic-green;
+    opacity: 1;
+  }
+
+  &:focus {
+    color: @basic-green;
+    opacity: 1;
+  }
+
+  &:active {
+    color: @basic-green;
+    opacity: 0.3;
   }
 }

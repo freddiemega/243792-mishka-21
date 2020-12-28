@@ -43,8 +43,6 @@
       padding: 0;
       background-image: url("../img/zigzag-separator-desktop.svg");
       background-size: 1050px 100%;
-      //background-position: 50% 50%;
-      //transform: rotate(180deg);
     }
   }
 }
@@ -75,14 +73,36 @@
   }
 }
 
-.product__item {
-  display: flex;
-  padding: 9px 0 11px;
-  border-bottom: 1px solid @special-grey-lighter;
+.product__list {
+  color: @basic-grey;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
 
-  &:last-child {
-    margin-bottom: 28px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
   }
+}
+
+.product__item {
+  border-bottom: 1px solid @special-grey-lighter;
+}
+
+.product__number {
+  width: 97px;
+  padding: 0;
+  padding-top: 9px;
+  padding-bottom: 10px;
+}
+
+.product__description {
+  padding: 0;
+  padding-top: 8px;
+  padding-bottom: 11px;
 }
 
 .product__name {
@@ -122,6 +142,7 @@
     margin: 0 auto;
     margin-top: 43px;
     padding-left: 0;
+    padding-right: 10px;
   }
 }
 
@@ -133,6 +154,7 @@
     grid-row-end: -1;
     display: block;
     align-self: end;
+    margin-bottom: -5px;
   }
 
   @media (min-width: @desktop-width) {
@@ -163,7 +185,7 @@
     grid-row-start: 1;
     grid-row-end: 2;
     z-index: 2;
-    margin-top: 43px;
+    margin-top: 41px;
     padding-left: 0;
   }
 }
@@ -186,6 +208,7 @@
     grid-row-end: 3;
     padding-left: 0;
     margin-right: 55px;
+    padding-top: 33px;
   }
 }
 
@@ -208,14 +231,6 @@
   }
 }
 
-.product__list {
-  color: @basic-grey;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
-  margin: 0;
-}
-
 .product__price {
   color: @basic-grey;
   font-weight: 700;
@@ -223,8 +238,8 @@
   line-height: 24px;
   margin: 0;
   text-align: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 23px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
@@ -235,7 +250,7 @@
     font-size: 20px;
     line-height: 24px;
     justify-self: baseline;
-    padding-bottom: 36px;
+    padding-bottom: 32px;
     padding-left: 72px;
   }
 

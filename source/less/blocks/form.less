@@ -9,8 +9,12 @@
   padding: 0;
   border: none;
 
+  &--radio {
+    margin-bottom: 44px;
+  }
+
   &--fio {
-    margin-bottom: 10px;
+    margin-bottom: 11px;
   }
 
   &--contacts {
@@ -18,7 +22,7 @@
   }
 
   &--more {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
   }
 
   &--button {
@@ -31,7 +35,7 @@
     }
 
     &--checkbox {
-      background-color: @special-grey-background;
+      background-color: @special-grey;
       margin-bottom: 0;
     }
 
@@ -40,7 +44,7 @@
     }
 
     &--contacts {
-      background-color: @special-grey-background;
+      background-color: @special-grey;
       margin-bottom: 0;
     }
 
@@ -61,6 +65,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    &--radio {
+      margin-bottom: 15px;
+    }
+
     &--more {
       margin-bottom: 0;
     }
@@ -84,6 +92,11 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: min-content;
     position: relative;
+
+    &--fio {
+      padding-top: 48px;
+      padding-bottom: 52px;
+    }
 
     &--contacts {
       display: block;
@@ -120,6 +133,10 @@
 
   margin-bottom: 35px;
 
+  &--checkbox {
+    margin-bottom: 33px;
+  }
+
   &--fio {
     margin-bottom: 30px;
   }
@@ -148,7 +165,7 @@
     }
 
     &--fio {
-      top: 65px;
+      top: 67px;
     }
   }
 }
@@ -344,6 +361,7 @@
 
     &--more {
       justify-self: center;
+      padding-right: 10px;
     }
   }
 }
@@ -362,19 +380,19 @@
     border-left: none;
     border-right: none;
     border-bottom: 2px solid @basic-grey;
-    height: 50px;
+    height: 51px;
   }
 
   &--fio:hover {
     border-bottom: 2px solid @special-green-underline;
   }
 
-  &--fio:active {
+  &--fio:focus {
     border-bottom: 2px solid @special-green-underline;
     color: @basic-grey;
   }
 
-  &--fio:focus {
+  &--fio:active {
     border-bottom: 2px solid @special-green-underline;
     color: @basic-grey;
   }
@@ -393,7 +411,7 @@
     border-left: none;
     border-right: none;
     border-bottom: 2px solid @basic-grey;
-    height: 50px;
+    height: 51px;
   }
 
   &--contacts:hover {
@@ -556,7 +574,7 @@
   font-size: 14px;
   line-height: 16px;
   color: @basic-grey;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
@@ -567,7 +585,7 @@
 
 .form__item {
   &--contacts {
-    margin-bottom: 36px;
+    margin-bottom: 35px;
   }
 
   &--contacts:last-child {
@@ -581,6 +599,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      margin-bottom: 25px;
     }
 
     &--contacts:last-child {
@@ -596,7 +615,7 @@
 }
 
 .form__list-item {
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
     display: flex;

@@ -1,0 +1,29 @@
+.form-size__inner {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  line-height: 16px;
+  color: @basic-grey;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.form-size__checkbox {
+  width: 82px;
+  margin-bottom: 31px;
+  margin-right: 7px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 112px;
+  }
+}
