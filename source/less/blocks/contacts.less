@@ -92,6 +92,7 @@
 .contacts__map {
   width: 100%;
   margin-bottom: 44px;
+  position: relative;
 
   img {
     display: block;
@@ -100,9 +101,22 @@
     object-fit: cover;
   }
 
+  &::before {
+    content: url("../img/map-pin.svg");
+    width: 67px;
+    height: 100px;
+    position: absolute;
+    top: 147px;
+    left: calc(50% - 21px);
+  }
+
   @media (min-width: @tablet-width) {
     height: 457px;
     margin-bottom: 54px;
+
+    &::before {
+      top: 140px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -112,6 +126,11 @@
     grid-row-start: 1;
     grid-row-end: -1;
     margin: 0;
+
+    &::before {
+      top: 143px;
+      left: calc(50% - 24px);
+    }
   }
 }
 

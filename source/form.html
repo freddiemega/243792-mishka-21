@@ -35,7 +35,7 @@
         </ul>
         <ul class="main-nav__list user-list">
           <li class="user-list__item user-list__item--search">
-            <a class="user-list__item-link" href="search.html">
+            <a class="user-list__item-link" href="search.html" aria-label="Поиск по сайту">
               <svg class="user-list__icon-search" width="18" height="18">
                 <use xlink:href="img/svg/sprite.svg#icon-search"></use>
               </svg>
@@ -250,18 +250,18 @@
       </div>
     </footer>
     <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
+      var navMain = document.querySelector(".main-nav");
+      var navToggle = document.querySelector(".main-nav__toggle");
 
-      navMain.classList.remove('main-nav--nojs');
+      navMain.classList.remove("main-nav--nojs");
 
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
+      navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("main-nav--closed")) {
+          navMain.classList.remove("main-nav--closed");
+          navMain.classList.add("main-nav--opened");
         } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
+          navMain.classList.add("main-nav--closed");
+          navMain.classList.remove("main-nav--opened");
         }
       });
     </script>

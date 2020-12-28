@@ -35,7 +35,7 @@
         </ul>
         <ul class="main-nav__list user-list">
           <li class="user-list__item user-list__item--search">
-            <a class="user-list__item-link" href="search.html">
+            <a class="user-list__item-link" href="search.html" aria-label="Поиск по сайту">
               <svg class="user-list__icon-search" width="18" height="18">
                 <use xlink:href="img/svg/sprite.svg#icon-search"></use>
               </svg>
@@ -136,7 +136,7 @@
           <p class="product__price">
             Цена: 990 руб.
           </p>
-          <a class="product__button button" href="#">Заказать</a>
+          <a class="product__button button js-modal-button" href="#">Заказать</a>
         </div>
       </section>
       <section class="advantages">
@@ -174,7 +174,7 @@
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item">
               <p class="reviews__item reviews__item--text">
-                Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
               </p>
               <p class="reviews__item reviews__item--name">
                 Анастасия Красильникова
@@ -241,7 +241,7 @@
             </div>
           </address>
           <div class="contacts__map">
-            <picture class="product__image">
+            <picture>
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
@@ -300,21 +300,88 @@
         </div>
       </div>
     </footer>
+
+    <section class="modal-overlay ">
+      <div class="modal-cart ">
+        <div class="modal-cart__inner">
+          <h2 class="modal-cart__title">Добавить<br> в корзину</h2>
+          <p class="modal-cart__text">Выберите размер:</p>
+          <form action="https://echo.htmlacademy.ru" method="post" class="form-size">
+            <ul class="form-size__inner">
+              <li class="checkbox-cart form-size__checkbox">
+                <input class="visually-hidden checkbox-cart__control" type="checkbox" name="small" id="small-field" value="small-size" checked>
+                <label class="checkbox-cart__label" for="small-field">s</label>
+              </li>
+              <li class="checkbox-cart form-size__checkbox">
+                <input class="visually-hidden checkbox-cart__control" type="checkbox" name="medium" id="medium-field" value="medium-size">
+                <label class="checkbox-cart__label" for="medium-field">m</label>
+              </li>
+              <li class="checkbox-cart form-size__checkbox">
+                <input class="visually-hidden checkbox-cart__control" type="checkbox" name="large" id="large-field" value="large-size">
+                <label class="checkbox-cart__label" for="large-field">l</label>
+              </li>
+            </ul>
+            <button class="button modal-cart__button" type="submit">Добавить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
+      var navMain = document.querySelector(".main-nav");
+      var navToggle = document.querySelector(".main-nav__toggle");
 
-      navMain.classList.remove('main-nav--nojs');
+      navMain.classList.remove("main-nav--nojs");
 
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
+      navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("main-nav--closed")) {
+          navMain.classList.remove("main-nav--closed");
+          navMain.classList.add("main-nav--opened");
         } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
+          navMain.classList.add("main-nav--closed");
+          navMain.classList.remove("main-nav--opened");
         }
       });
+    </script>
+
+    <script>
+      if (document.querySelector(".modal-overlay")) {
+        var modalOverlay = document.querySelector(".modal-overlay"),
+        modalCart = modalOverlay.querySelector(".modal-cart"),
+        modalButtons = document.querySelectorAll(".js-modal-button");
+        modalButtonArray = Array.prototype.slice.call(modalButtons);
+        var modalField = modalCart.querySelector(".checkbox-cart__label");
+
+        modalButtonArray.forEach(function (el) {
+          el.addEventListener("click", function (e) {
+            e.preventDefault();
+            modalOverlay.classList.remove("visually-hidden");
+            modalOverlay.classList.add("modal-overlay--open");
+            modalCart.classList.add("modal-cart--open");
+            modalField.focus();
+            document.body.style.overflow = "hidden";
+
+
+            if (modalCart.classList.contains("modal-cart--open")) {
+              window.addEventListener("click", function (e) {
+                if (e.target === modalOverlay) {
+                  document.body.style.overflow = "visible";
+                  modalOverlay.classList.remove("modal-overlay--open");
+                  modalCart.classList.remove("modal-cart--open");
+                  }
+                });
+              window.addEventListener("keydown", function (evt) {
+                if (evt.keyCode === 27) {
+                  document.body.style.overflow = "visible";
+                  modalOverlay.classList.remove("modal-overlay--open");
+                  modalCart.classList.remove("modal-cart--open");
+                }
+              });
+
+            }
+          });
+        });
+      }
     </script>
   </body>
 </html>
