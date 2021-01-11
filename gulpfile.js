@@ -42,12 +42,6 @@ exports.clean = clean;
 
 const html = () => {
   return gulp.src("source/*.html")
-  .pipe(cheerio({
-      run: function ($) {
-        $("link").attr("href", "css/style.min.css");
-      },
-      //parserOptions: { xmlMode: true }
-    }))
   .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest("build"));
 }
@@ -101,8 +95,6 @@ const sprite = () => {
     .pipe(cheerio({
       run: function ($) {
         $("path").attr("fill", "CurrentColor");
-        $("path").attr("opacity", "1");
-        $("g").attr("opacity", "1");
       },
       parserOptions: { xmlMode: true }
     }))
@@ -218,15 +210,13 @@ const build = gulp.series(
     images,
     createWebp
   ),
-  sprite,
-  gulp.series(
-    serverBuild
-  ));
+  sprite
+  );
 
 exports.build = build;
 
 // Default
-/*
+
 exports.default = gulp.series(
   clean,
   copy,
@@ -241,4 +231,3 @@ exports.default = gulp.series(
   gulp.series(
     serverBuild
   ));
-*/
