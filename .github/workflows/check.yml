@@ -11,7 +11,7 @@ jobs:
     name: Check
     runs-on: ubuntu-latest
     steps:
-    - name: Set up Node.js
+    - name: Set up Node.min.js
       uses: actions/setup-node@v1
       with:
         node-version: '12.18'
