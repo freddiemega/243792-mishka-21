@@ -14,12 +14,6 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const cheerio = require("gulp-cheerio");
-const filenames = require("gulp-filenames");
-const debug = require("gulp-debug");
-const tap = require("gulp-tap");
-const path = require("path");
-const replace = require("replace");
-const replaceinfile = require('replace-in-file');
 
 // Pages
 
@@ -178,7 +172,7 @@ const watcher = () => {
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
-exports.default = gulp.series(
+exports.watcher = gulp.series(
   styles, server, watcher
 );
 
