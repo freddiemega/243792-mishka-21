@@ -7,15 +7,15 @@ var numberCurrent = 0;
 
 buttonLeft.addEventListener("click", function (evt) {
   evt.preventDefault();
-  dec();
+  decrease();
 });
 
 buttonRight.addEventListener("click", function (evt) {
   evt.preventDefault();
-  inc();
+  increase();
 });
 
-function inc() {
+function increase() {
   arraySlides[numberCurrent].classList.toggle('slider__item--show');
   if (numberCurrent == quantitySlides - 1) {
     numberCurrent = -1;
@@ -24,7 +24,7 @@ function inc() {
   numberCurrent++;
 }
 
-function dec() {
+function decrease () {
   arraySlides[numberCurrent].classList.toggle('slider__item--show');
   if (numberCurrent == 0) {
     numberCurrent = quantitySlides;
