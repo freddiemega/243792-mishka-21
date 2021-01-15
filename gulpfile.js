@@ -173,7 +173,7 @@ const watcher = () => {
 }
 
 exports.watcher = gulp.series(
-  styles, server, watcher
+  html, watcher
 );
 
 // ServerBuild
@@ -213,8 +213,6 @@ exports.build = build;
 
 exports.default = gulp.series(
   build,
-  gulp.series(
-    serverBuild
-  ),
+  serverBuild,
   watcher
   );
