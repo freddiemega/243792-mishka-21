@@ -1,9 +1,6 @@
 .user-list {
   background-color: transparent;
-  /*
-  outline: 5px solid green;
-  outline-offset: -5px;
-*/
+
   @media (min-width: @tablet-width) {
     grid-column-start: 3;
     grid-column-end: 4;
@@ -27,8 +24,8 @@
     &--search {
       padding: 0;
       width: 84px;
-      border-left: 1px solid fade(@basic-black, 10%);
-      border-right: 1px solid fade(@basic-black, 10%);
+      border-left: 1px solid rgba(@basic-black, 0.1);
+      border-right: 1px solid rgba(@basic-black, 0.1);
     }
   }
 }
