@@ -54,6 +54,7 @@
   @media (min-width: @tablet-width) {
     padding: 50px;
     padding-bottom: 85px;
+    background-color: @basic-white;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     display: grid;
@@ -163,7 +164,7 @@
 
   &--link:active {
     color: @special-green-underline-2;
-    border-bottom-color: fade(@special-green-underline-2; 10%);
+    border-bottom-color: rgba(@special-green-underline-2, 0.1);
   }
 
   @media (min-width: @tablet-width) {

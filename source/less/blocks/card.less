@@ -69,11 +69,6 @@
 
 .card__container-name {
   padding-bottom: 18px;
-  box-shadow: inset 0 -1px 0 @special-grey-lighter;
-
-  @media (min-width: @tablet-width) {
-    box-shadow: none;
-  }
 
   @media (min-width: @desktop-width) {
     padding-top: 0;
@@ -94,6 +89,10 @@
 }
 
 .card__link-image {
+  img {
+    display: block;
+  }
+
   &:hover + .card__container {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   }
@@ -105,10 +104,6 @@
   &:active + .card__container {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
-}
-
-.card__link-image img {
-  display: block;
 }
 
 .card__title {
@@ -196,6 +191,8 @@
   cursor: pointer;
   padding: 0;
   margin-right: -3px;
+  display: flex;
+  align-items: center;
 
   &:focus .card__button-icon {
     color: @basic-green;
