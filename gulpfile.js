@@ -36,7 +36,7 @@ exports.clean = clean;
 
 const html = () => {
   return gulp.src("source/*.html")
-  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(htmlmin({ collapseWhitespace: true, ignoreCustomFragments: [ /<br>\s/gi ] }))
   .pipe(gulp.dest("build"));
 }
 
@@ -120,6 +120,7 @@ const stylesmin = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
+    .pipe(gulp.dest("build/css"))
     .pipe(postcss([
       autoprefixer(),
       csso()

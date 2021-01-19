@@ -33,6 +33,22 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
+
+    svg {
+      color: @basic-black;
+    }
+
+    &[href]:hover svg {
+      color: @special-green-underline-2;
+    }
+
+    &[href]:focus svg {
+      color: @special-green-underline-2;
+    }
+
+    &[href]:active svg {
+      color: rgba(@special-green-underline-2, 0.3);
+    }
   }
 }
 

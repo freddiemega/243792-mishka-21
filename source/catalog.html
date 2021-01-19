@@ -54,7 +54,7 @@
             </a>
           </li>
         </ul>
-        <ul class="main-nav__list special-list">
+        <ul class="main-nav__list main-nav__list--special special-list">
           <li class="special-list__item">
             <a href="#">
               Новые поступления
@@ -181,7 +181,7 @@
         <div class="video__wrapper container">
           <div class="video__wrapper-inner">
             <h2 class="video__title">
-              Процесс<br>производства
+              Процесс<br> производства
             </h2>
             <div class="video__container">
               <picture>
@@ -206,9 +206,11 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
-        <div class="page-footer__logo-container">
-          <img class="page-footer__logo" src="img/logo-footer.svg" width="102" height="34" alt="Логотип Интернет-магазин «Мишка»">
-        </div>
+        <a class="page-footer__logo-container" href="index.html" aria-label="На главную страницу">
+          <svg width="102" height="34" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/svg/sprite.svg#logo-footer"></use>
+          </svg>
+        </a>
         <div class="page-footer__social social">
           <b class="social__title visually-hidden">Давайте дружить!</b>
           <ul class="social__list">
